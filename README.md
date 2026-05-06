@@ -64,7 +64,7 @@ Abra o terminal na pasta do projeto e execute:
 
 ```bash
 
-javac Login.java
+javac Registro.java
 
-java Login
+java Registro
 
