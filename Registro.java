@@ -54,6 +54,7 @@ public class Registro {
 
                 if (s1.login_criado.equals(s1.login) && s1.senha_criada.equals(s1.senha)){
                     System.out.println("Acesso Autorizado!");
+                    tentativa = 0;
                     
                     while (true) {
 
