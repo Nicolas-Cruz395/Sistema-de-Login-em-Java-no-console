@@ -94,7 +94,7 @@ public class Registro {
                     tentativa++;
 
                 } else {
-                    System.out.println("Login e senha Incorreto! ");
+                    System.out.println("Login e senha Incorretos! ");
                     tentativa++;
                 } 
                 if (tentativa >= limite) {
