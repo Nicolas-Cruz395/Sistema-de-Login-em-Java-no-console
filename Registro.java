@@ -8,7 +8,7 @@ class Usuario {
     String senha_criada;
 }
 
-public class Login {
+public class Registro {
     public static void main(String []args){
         Usuario s1 = new Usuario();
         Scanner sc = new Scanner(System.in);
@@ -24,9 +24,9 @@ public class Login {
         while (true) {
 
             System.out.println("\n==== BANCO CENTRO =====");
-            System.out.println("[1] - Cadastro");
-            System.out.println("[2] - Login");
-            System.out.println("[3] - Sair");
+            System.out.println("[1] Cadastro");
+            System.out.println("[2] Login");
+            System.out.println("[3] Sair");
             System.out.print("Escolher: ");
             int opcao = sc.nextInt();
             sc.nextLine();
@@ -43,7 +43,7 @@ public class Login {
                 if (s1.login_criado == null || s1.senha_criada == null){
                 System.out.println("Você precisa ter um cadastro!");
                 continue;
-                
+
                 }
 
                 System.out.println("Digite seu login: ");
@@ -54,7 +54,35 @@ public class Login {
 
                 if (s1.login_criado.equals(s1.login) && s1.senha_criada.equals(s1.senha)){
                     System.out.println("Acesso Autorizado!");
-                    break;
+                    
+                    while (true) {
+
+                        System.out.println("\n==== Painel do Usuario =====");
+                        System.out.println("[1] Ver perfil");
+                        System.out.println("[2] Alterar senha");
+                        System.out.println("[3] Sair");
+                        System.out.print("Escolha: ");
+                        int opcao2 = sc.nextInt();
+                        sc.nextLine();
+
+                        if (opcao2 == 1) {
+                            System.out.println("==== Perfil do Usuario ====");
+                            System.out.printf("\nNome: %s",s1.nome);
+                            System.out.printf("\nLogin: %s",s1.login_criado);
+                            System.out.printf("\nSenha: %s\n",s1.senha_criada);
+
+                        } else if (opcao2 == 2) {
+                            System.out.print("Crie sua nova senha: ");
+                            s1.senha_criada = sc.nextLine();
+
+                        } else if (opcao2 == 3) {
+                            break;
+
+                        } else {
+                            System.out.println("Selecione uma opção valida!");
+                            continue;
+                        }
+                    }
 
                 } else if (!s1.login_criado.equals(s1.login) && s1.senha_criada.equals(s1.senha)){
                     System.out.println("Login ou senha incorretos! ");
