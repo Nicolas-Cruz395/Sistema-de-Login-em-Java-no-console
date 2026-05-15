@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 class Usuario {
     String nome;
@@ -12,6 +13,7 @@ public class Registro {
     public static void main(String []args){
         Usuario s1 = new Usuario();
         Scanner sc = new Scanner(System.in);
+        ArrayList<String> credenciais = new ArrayList<String>();
 
         int tentativa = 0;
         int limite = 3;
@@ -34,9 +36,11 @@ public class Registro {
             if (opcao == 1) {
                 System.out.println("Crie seu login: ");
                 s1.login_criado = sc.nextLine();
+                credenciais.add(s1.login_criado);
 
                 System.out.println("Crie sua senha: ");
                 s1.senha_criada = sc.nextLine();
+                credenciais.add(s1.senha_criada);
 
             } else if (opcao == 2) {
 
@@ -69,12 +73,23 @@ public class Registro {
                         if (opcao2 == 1) {
                             System.out.println("==== Perfil do Usuario ====");
                             System.out.printf("\nNome: %s",s1.nome);
-                            System.out.printf("\nLogin: %s",s1.login_criado);
-                            System.out.printf("\nSenha: %s\n",s1.senha_criada);
+                            System.out.printf("\nLogin: %s", s1.login_criado);
+                            System.out.printf("\nSenha: %s\n", s1.senha_criada);
+                            System.out.println("[1] Voltar: ");
+                            int volta = sc.nextInt();
+                            sc.nextLine();
+
+                            if (volta == 1){
+                                continue;
+                            }
 
                         } else if (opcao2 == 2) {
                             System.out.print("Crie sua nova senha: ");
                             s1.senha_criada = sc.nextLine();
+
+                            credenciais.set(1, s1.senha_criada);
+
+                            System.out.println("Senha alterada com sucesso!");
 
                         } else if (opcao2 == 3) {
                             break;
@@ -94,7 +109,7 @@ public class Registro {
                     tentativa++;
 
                 } else {
-                    System.out.println("Login e senha Incorretos! ");
+                    System.out.println("Login e senha Incorreto! ");
                     tentativa++;
                 } 
                 if (tentativa >= limite) {
