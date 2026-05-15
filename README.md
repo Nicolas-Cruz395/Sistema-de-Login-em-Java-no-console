@@ -1,4 +1,4 @@
-🔐 Sistema de Login em Java (Console);
+Sistema de Login em Java (Console);
 
 Um sistema simples de autenticação desenvolvido em Java, executado via terminal.  
 
@@ -6,7 +6,7 @@ O projeto permite cadastro de usuário, login com validação e controle de tent
 
 -------------------------
 
-📌 Sobre o projeto;
+Sobre o projeto;
 
 Este projeto foi criado com o objetivo de praticar conceitos fundamentais da programação em Java, como entrada de dados, estruturas de controle e lógica de autenticação.
 
@@ -14,7 +14,7 @@ O sistema simula um ambiente básico de login, onde o usuário pode se cadastrar
 
 -------------------------
 
-⚙️ Funcionalidades;
+Funcionalidades;
 
 - ✅ Cadastro de usuário (login e senha)
 
@@ -30,7 +30,7 @@ O sistema simula um ambiente básico de login, onde o usuário pode se cadastrar
 
 -------------------------
 
-🧠 Como o sistema funciona;
+Como o sistema funciona;
 
 1. O usuário informa seu nome ao iniciar o programa
 
@@ -54,11 +54,11 @@ O sistema simula um ambiente básico de login, onde o usuário pode se cadastrar
 
 💻 Como executar o projeto
 
-📋 Pré-requisitos
+Pré-requisitos
 
 - Java JDK instalado (versão 8 ou superior)
 
-▶️ Passos para execução
+ ===Passos para execução===
 
 Abra o terminal na pasta do projeto e execute:
 
