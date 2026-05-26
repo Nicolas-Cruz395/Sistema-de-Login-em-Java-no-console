@@ -34,6 +34,9 @@ public class Registro {
             sc.nextLine();
 
             if (opcao == 1) {
+                
+                System.out.println("\n--- CADASTRO ---");
+                
                 System.out.println("Crie seu login: ");
                 s1.login_criado = sc.nextLine();
                 credenciais.add(s1.login_criado);
@@ -49,6 +52,8 @@ public class Registro {
                 continue;
 
                 }
+                
+                System.out.println("\n--- LOGIN ---");
 
                 System.out.println("Digite seu login: ");
                 s1.login = sc.nextLine();
